@@ -1,4 +1,4 @@
-import { Product } from './ProductModel'
+import { Product } from './product.model'
 
 const GET_PRODUCTS_URL = '/data/products.json'
 

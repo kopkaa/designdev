@@ -3,7 +3,7 @@ import { defineProps } from 'vue'
 import { Product } from '@/api/products/product.model'
 import StarIcon from '@/assets/star.svg'
 
-const props = defineProps<{
+const { product } = defineProps<{
   product: Product
 }>()
 </script>
