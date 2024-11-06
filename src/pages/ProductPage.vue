@@ -30,10 +30,8 @@ onMounted(async () => {
       </div>
     </div>
 
-    <div class="w-full bg-yellow-200 text-yellow-700 font-semibold text-center py-3 rounded-md mb-8">
-      Buy multiples original canine or human products
-    </div>
-		
+    <div class="w-full bg-yellow-200 text-yellow-700 font-semibold text-center py-3 rounded-md mb-8"> Buy multiples original canine or human products </div>
+
     <div class="container mx-auto px-4">
       <div v-if="products.length" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
         <ProductItem v-for="product in products" :key="product.id" :product="product" />

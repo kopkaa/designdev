@@ -5,15 +5,15 @@ module.exports = {
     extend: {
       colors: {
         'lime-green': '#B1CA52',
-        'forest-green': '#418241',
+        'forest-green': '#418241'
       },
-			fontFamily: {
-        raleway: ['Raleway', 'sans-serif'], 
-      },
-    },
+      fontFamily: {
+        raleway: ['Raleway', 'sans-serif']
+      }
+    }
   },
   variants: {
-    extend: {},
+    extend: {}
   },
-  plugins: [],
+  plugins: []
 }
