@@ -20,7 +20,6 @@ onMounted(async () => {
 <template>
   <div class="bg-white font-raleway h-full py-8">
     <div class="text-center mb-8">
-      <h1 class="text-3xl font-bold">The Fab 4</h1>
 
       <div class="flex justify-center mt-4">
         <div class="flex rounded-full overflow-hidden bg-gray-200">

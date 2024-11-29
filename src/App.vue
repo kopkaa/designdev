@@ -1,7 +1,13 @@
-<script setup lang="ts">
-import ProductPage from '@/pages/ProductPage.vue'
-</script>
-
 <template>
-  <ProductPage />
+  <DefaultLayout />
 </template>
+
+<script>
+import DefaultLayout from './layouts/DefaultLayout.vue';
+
+export default {
+  components: {
+    DefaultLayout,
+  },
+};
+</script>
