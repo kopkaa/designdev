@@ -3,7 +3,6 @@
     <div
       class="container mx-auto grid grid-cols-1 gap-8 px-4 py-12 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 xl:max-w-screen-lg 2xl:max-w-screen-xl"
     >
-      <!-- Dynamic Footer Lists -->
       <FooterList
         title="Company Info"
         :links="[
@@ -40,13 +39,14 @@
           { label: 'API', href: '#' }
         ]"
       />
-      <!-- Get In Touch -->
+
+
       <div>
         <h3 class="mb-4 text-lg font-semibold text-gray-800">Get In Touch</h3>
-        <ul class="space-y-2 text-gray-600">
+        <ul class="space-y-2 text-light-gray font-bold">
           <li>
             <a href="tel:4805550103" class="flex items-center hover:text-gray-800" aria-label="Call us at (480) 555-0103">
-              <span class="mr-2">📞</span> (480) 555-0103
+              <img :src="ContactIcon" alt="Contact icon" class="mr-3 h-5 w-5" loading="lazy" decoding="async" /> (480) 555-0103
             </a>
           </li>
           <li>
@@ -55,7 +55,8 @@
               class="flex items-center hover:text-gray-800"
               aria-label="Our location: 4577 Washington Ave. Manchester, Kentucky 39495"
             >
-              <span class="mr-2">📍</span> 4577 Washington Ave. Manchester, Kentucky 39495
+              <img :src="LocationIcon" alt="Location icon" class="mr-3 h-5 w-5" loading="lazy" decoding="async" />4577 Washington Ave.
+              Manchester, Kentucky 39495
             </a>
           </li>
           <li>
@@ -64,14 +65,14 @@
               class="flex items-center hover:text-gray-800"
               aria-label="Email us at debra.holt@example.com"
             >
-              <span class="mr-2"> <img :src="EmailIcon" alt="Email icon" class="h-5 w-5" loading="lazy" decoding="async" /></span>
+              <img :src="EmailIcon" alt="Email icon" class="mr-3 h-5 w-5" loading="lazy" decoding="async" />
               debra.holt@example.com
             </a>
           </li>
         </ul>
       </div>
     </div>
-    <!-- Footer Bottom -->
+    
     <div class="bg-gray-200 py-6">
       <div
         class="container mx-auto flex flex-col items-center justify-between gap-4 px-4 text-center sm:flex-row xl:max-w-screen-lg 2xl:max-w-screen-xl"
