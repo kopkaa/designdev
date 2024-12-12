@@ -1,17 +1,17 @@
 <template>
-  <div>
+  <div class="h-full">
     <header> 
         <Navigation/>
     </header>
-    <main>
+    <main class="h-full">
       <router-view />
     </main>
-    <footer>
+    <!-- <footer>
       <p>© 2024 Simple Vue App</p>
-    </footer>
+    </footer> -->
   </div>
 </template>
 <script setup lang="ts">
-import Navigation from '@/components/Navigation.vue'
+import Navigation from '@/components/MainNavigation.vue'
 </script>
 

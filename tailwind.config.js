@@ -4,8 +4,12 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'lime-green': '#B1CA52',
-        'forest-green': '#418241'
+        'soft-pink': '#FDF3F1',
+        'peach': '#FEBC94',
+        'dark-blue': '#252B42',
+        'deep-red': '#A01A10',
+        'light-gray': '#737373',
+        'camo': '#96BA7B'
       },
       fontFamily: {
         raleway: ['Raleway', 'sans-serif']
@@ -16,4 +20,4 @@ module.exports = {
     extend: {}
   },
   plugins: []
-}
+};

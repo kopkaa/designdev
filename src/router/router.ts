@@ -1,8 +1,19 @@
 import { createRouter, createWebHistory } from 'vue-router';
-import ProductPage from '../pages/ProductPage.vue';
+import DefaultLayout from '../layouts/DefaultLayout.vue';
+import MainPage from '../pages/MainPage.vue';
 
 const routes = [
-  { path: '/', name: 'Products', component: ProductPage },
+  {
+    path: '/',
+    component: DefaultLayout,
+    children: [
+      {
+        path: '',
+        name: 'Products',
+        component: MainPage,
+      },
+    ],
+  },
 ];
 
 const router = createRouter({
