@@ -16,7 +16,7 @@ import BlackboardIcon from '@/assets/012-blackboards.svg'
     <div class="mx-auto grid 2xl:max-w-screen-xl xl:max-w-screen-lg grid-cols-1 items-start gap-12 md:grid-cols-2">
       <div>
         <span class="mb-5 block h-1 w-20 bg-red-500"></span>
-        <h2 class="relative mb-8 text-4xl font-bold text-gray-900"> Approadable Packages </h2>
+        <h2 class="mb-8 text-4xl font-bold text-gray-900"> Approadable Packages </h2>
         <p class="mb-6 text-sm text-light-gray">
           Problems trying to resolve the conflict between the two major realms of Classical physics: Newtonian mechanics.
         </p>
