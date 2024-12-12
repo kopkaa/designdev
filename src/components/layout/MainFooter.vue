@@ -1,6 +1,8 @@
 <template>
   <footer class="bg-gray-100">
-    <div class="container mx-auto grid grid-cols-1 gap-8 px-4 py-12 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 xl:max-w-screen-lg 2xl:max-w-screen-xl">
+    <div
+      class="container mx-auto grid grid-cols-1 gap-8 px-4 py-12 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 xl:max-w-screen-lg 2xl:max-w-screen-xl"
+    >
       <!-- Dynamic Footer Lists -->
       <FooterList
         title="Company Info"
@@ -43,11 +45,7 @@
         <h3 class="mb-4 text-lg font-semibold text-gray-800">Get In Touch</h3>
         <ul class="space-y-2 text-gray-600">
           <li>
-            <a
-              href="tel:4805550103"
-              class="flex items-center hover:text-gray-800"
-              aria-label="Call us at (480) 555-0103"
-            >
+            <a href="tel:4805550103" class="flex items-center hover:text-gray-800" aria-label="Call us at (480) 555-0103">
               <span class="mr-2">📞</span> (480) 555-0103
             </a>
           </li>
@@ -66,7 +64,8 @@
               class="flex items-center hover:text-gray-800"
               aria-label="Email us at debra.holt@example.com"
             >
-              <span class="mr-2">✉️</span> debra.holt@example.com
+              <span class="mr-2"> <img :src="EmailIcon" alt="Email icon" class="h-5 w-5" loading="lazy" decoding="async" /></span>
+              debra.holt@example.com
             </a>
           </li>
         </ul>
@@ -77,36 +76,16 @@
       <div
         class="container mx-auto flex flex-col items-center justify-between gap-4 px-4 text-center sm:flex-row xl:max-w-screen-lg 2xl:max-w-screen-xl"
       >
-        <p class="text-sm font-bold text-gray-600">
-          Made With Love By Figmaland All Rights Reserved
-        </p>
+        <p class="text-sm font-bold text-gray-600"> Made With Love By Figmaland All Rights Reserved </p>
         <ul class="flex gap-4">
           <li>
-            <img
-              :src="FacebookIcon"
-              alt="Facebook icon"
-              class="h-5 w-5"
-              loading="lazy"
-              decoding="async"
-            />
+            <img :src="FacebookIcon" alt="Facebook icon" class="h-5 w-5" loading="lazy" decoding="async" />
           </li>
           <li>
-            <img
-              :src="InstagramIcon"
-              alt="Instagram icon"
-              class="h-5 w-5"
-              loading="lazy"
-              decoding="async"
-            />
+            <img :src="InstagramIcon" alt="Instagram icon" class="h-5 w-5" loading="lazy" decoding="async" />
           </li>
           <li>
-            <img
-              :src="TwitterIcon"
-              alt="Twitter icon"
-              class="h-5 w-5"
-              loading="lazy"
-              decoding="async"
-            />
+            <img :src="TwitterIcon" alt="Twitter icon" class="h-5 w-5" loading="lazy" decoding="async" />
           </li>
         </ul>
       </div>
@@ -115,8 +94,11 @@
 </template>
 
 <script lang="ts" setup>
-import InstagramIcon from '@/assets/instagram.svg';
-import FacebookIcon from '@/assets/facebook.svg';
-import TwitterIcon from '@/assets/twitter.svg';
-import FooterList from '../FooterList.vue';
+import InstagramIcon from '@/assets/instagram.svg'
+import FacebookIcon from '@/assets/facebook.svg'
+import TwitterIcon from '@/assets/twitter.svg'
+import ContactIcon from '@/assets/contact.svg'
+import EmailIcon from '@/assets/email.svg'
+import LocationIcon from '@/assets/location.svg'
+import FooterList from '../FooterList.vue'
 </script>
