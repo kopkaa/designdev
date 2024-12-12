@@ -6,11 +6,7 @@
   </button>
 
   <div v-if="isMenuOpen" class="fixed inset-0 z-50 flex flex-col items-center justify-center bg-black bg-opacity-90 text-white">
-    <button
-      @click="toggleMenu"
-      class="absolute right-4 top-4 text-white focus:outline-none focus:ring-4 focus:ring-gray-300"
-      aria-label="Close navigation menu"
-    >
+    <button class="absolute right-4 top-4 text-white" aria-label="Close navigation menu" @click="toggleMenu">
       <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
       </svg>
@@ -20,12 +16,12 @@
       <li v-for="item in menuItems" :key="item.label">
         <a :href="item.link" class="hover:text-gray-300">{{ item.label }}</a>
       </li>
-      <hr>
+      <hr />
       <div class="flex items-center">
         <a href="/login" class="font-bold text-camo hover:text-green-700 focus:outline-none focus:ring-4 focus:ring-camo">Login</a>
         <button
           type="button"
-          class="text-md ml-10 flex items-center justify-center rounded-md bg-camo font-semibold uppercase text-white py-2 px-4"
+          class="text-md ml-10 flex items-center justify-center rounded-md bg-camo px-4 py-2 font-semibold uppercase text-white"
           aria-label="Join us"
         >
           Join us

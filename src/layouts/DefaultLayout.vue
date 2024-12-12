@@ -1,6 +1,6 @@
 <template>
   <div>
-    <header class="z-50 sticky top-20">
+    <header class="z-50 sticky top-0">
       <MainNavigation />
     </header>
     <main>
