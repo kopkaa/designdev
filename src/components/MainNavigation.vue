@@ -1,16 +1,23 @@
+<script setup lang="ts">
+// Add any necessary TypeScript code or imports here if needed
+</script>
+
 <template>
-  <nav class="px-8 py-8 bg-soft-pink" role="navigation">
+  <nav class="px-8 py-8 bg-pink-50" role="navigation">
     <div class="max-w-screen-lg flex items-center mx-auto">
+      <!-- Brand Name -->
       <div class="text-2xl font-bold text-gray-800">Brandname</div>
 
-      <div class="flex space-x-6 ml-24 text-light-gray font-bold">
+      <!-- Navigation Links -->
+      <div class="hidden md:flex space-x-6 ml-24 text-gray-700 font-bold">
         <a href="#" class="hover:text-gray-800">Home</a>
         <a href="#" class="hover:text-gray-800">Product</a>
         <a href="#" class="hover:text-gray-800">Pricing</a>
         <a href="#" class="hover:text-gray-800">Contact</a>
       </div>
 
-      <div class="flex ml-auto items-center">
+      <!-- Login and Join Us Button -->
+      <div class="hidden md:flex ml-auto items-center">
         <a href="#" class="hover:text-green-700 text-camo font-bold">Login</a>
         <button
           type="button"
@@ -22,6 +29,17 @@
           </svg>
         </button>
       </div>
+
+      <!-- Hamburger Menu -->
+      <button 
+        class="flex md:hidden ml-auto text-gray-700" 
+        aria-label="Toggle navigation menu"
+      >
+        <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+        </svg>
+      </button>
     </div>
   </nav>
 </template>
+

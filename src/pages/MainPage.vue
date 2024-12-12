@@ -4,9 +4,9 @@
 
 <template>
   <section class="bg-pink-50 h-full" aria-labelledby="hero-heading">
-    <div class="pl-28 mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center h-full">
-      <article class="mb-32 pl-12">
-        <h5 id="hero-subtitle" class="text-lg text-green-600 font-bold mb-7">
+    <div class="pt-24 md:pt-0 pl-8 md:pl-28 mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 md:items-center h-full">
+      <article class="md:mb-32 pl-0 md:pl-12">
+        <h5 id="hero-subtitle" class="text-lg text-camo font-bold mb-7">
           Welcome
         </h5>
         <h1
@@ -15,7 +15,7 @@
         >
           Best Learning <br /> Opportunities
         </h1>
-        <p class="text-xl text-gray-600 mb-7">
+        <p class="text-xl text-gray-600 mb-7 max-w-72 leading-8">
           Our goal is to make online education work for everyone
         </p>
         <div class="flex space-x-4">
@@ -35,7 +35,7 @@
       </article>
 
       <!-- Right Column (Image) -->
-      <div class="relative">
+      <div class="hidden md:block relative">
         <img
           src="@/assets/hero-cover-1.png"
           alt="Hero image of student"
