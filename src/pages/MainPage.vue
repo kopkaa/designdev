@@ -36,10 +36,13 @@
           <input
             v-model="email"
             placeholder="Your Email"
-            class="w-full flex-1 rounded-l-md border border-gray-300 px-4 py-3"
+            class="w-full flex-1 rounded-md xl:rounded-r-none border border-gray-300 px-4 py-3 xl:rounded-r-md"
             aria-label="Enter your email address"
           />
-          <button type="submit" class="rounded-r-md bg-camo px-6 py-3 font-medium text-white transition hover:bg-green-800">
+          <button
+            type="submit"
+            class="mt-4 rounded-md xl:rounded-l-none bg-camo px-6 py-3 font-medium text-white transition hover:bg-green-800 xl:mt-0 xl:rounded-r-md"
+          >
             Subscribe
           </button>
         </div>

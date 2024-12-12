@@ -14,7 +14,8 @@
 </template>
 
 <script setup lang="ts">
-import { ref, onMounted, onUnmounted } from 'vue';
+import { computed } from 'vue';
+import { useScroll } from '@vueuse/core';
 import DesktopMenu from './DesktopMenu.vue';
 import MobileMenu from './MobileMenu.vue';
 
@@ -25,23 +26,12 @@ const menuItems = [
   { label: 'Contact', link: '#' },
 ];
 
-const isScrolled = ref(false);
+const { y } = useScroll(window);
 
-const handleScroll = () => {
-  isScrolled.value = window.scrollY > 10;
-};
-
-onMounted(() => {
-  window.addEventListener('scroll', handleScroll);
-});
-
-onUnmounted(() => {
-  window.removeEventListener('scroll', handleScroll);
-});
+const isScrolled = computed(() => y.value > 10);
 </script>
 
 <style scoped>
-/* Adjust padding and add shadow when scrolled */
 nav[data-scrolled="true"] {
   padding-top: 1rem;
   padding-bottom: 1rem;

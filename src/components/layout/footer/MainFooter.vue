@@ -1,7 +1,7 @@
 <template>
   <footer class="bg-gray-100">
     <div
-      class="container mx-auto grid grid-cols-1 gap-8 px-4 py-12 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 xl:max-w-screen-lg 2xl:max-w-screen-xl"
+      class="container mx-auto pl-8 grid grid-cols-1 gap-6 py-12 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 xl:max-w-screen-lg 2xl:max-w-screen-xl"
     >
       <FooterList
         title="Company Info"
@@ -42,7 +42,8 @@
 
 
       <div>
-        <h3 class="mb-4 text-lg font-semibold text-gray-800">Get In Touch</h3>
+        <hr class="block xl:hidden">
+        <h3 class="mb-4 text-lg font-semibold text-gray-800 mt-4 md:mt-0">Get In Touch</h3>
         <ul class="space-y-2 text-light-gray font-bold">
           <li>
             <a href="tel:4805550103" class="flex items-center hover:text-gray-800" aria-label="Call us at (480) 555-0103">
@@ -101,5 +102,5 @@ import TwitterIcon from '@/assets/twitter.svg'
 import ContactIcon from '@/assets/contact.svg'
 import EmailIcon from '@/assets/email.svg'
 import LocationIcon from '@/assets/location.svg'
-import FooterList from '../FooterList.vue'
+import FooterList from './FooterList.vue'
 </script>

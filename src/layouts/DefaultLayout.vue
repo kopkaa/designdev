@@ -12,6 +12,6 @@
   </div>
 </template>
 <script setup lang="ts">
-import MainNavigation from '@/components/layout/MainNavigation.vue'
-import MainFooter from '@/components/layout/MainFooter.vue'
+import MainNavigation from '@/components/layout/menu/MainNavigation.vue'
+import MainFooter from '@/components/layout/footer/MainFooter.vue'
 </script>
