@@ -5,5 +5,6 @@
   "arrowParens": "always",
   "proseWrap": "never",
   "htmlWhitespaceSensitivity": "strict",
-  "trailingComma": "none"
+  "trailingComma": "none",
+  "plugins": ["prettier-plugin-tailwindcss"]
 }

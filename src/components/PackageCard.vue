@@ -9,13 +9,13 @@ const { icon, title, description } = defineProps<{
 </script>
 
 <template>
-  <div class="bg-white shadow-lg rounded-lg px-8 py-9">
-    <div class="flex items-center justify-center w-16 h-16 py-8 bg-camo rounded-lg mb-4">
-      <img :src="icon" alt="icon" class="w-5 h-5" />
+  <div class="rounded-lg bg-white px-8 py-9 shadow-lg">
+    <div class="mb-4 flex h-16 w-16 items-center justify-center rounded-lg bg-camo py-8">
+      <img :src="icon" alt="icon" class="h-5 w-5" />
     </div>
-    <h3 class="text-lg font-bold text-gray-900 mb-5"> {{ title }} </h3>
-    <span class="block w-8 h-1 bg-red-500 mb-5"></span>
-    <p class="text-light-gray text-sm">
+    <h3 class="mb-5 text-lg font-bold text-gray-900"> {{ title }} </h3>
+    <span class="mb-5 block h-1 w-8 bg-red-500"></span>
+    <p class="text-sm text-light-gray">
       {{ description }}
     </p>
   </div>

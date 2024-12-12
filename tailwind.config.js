@@ -11,9 +11,6 @@ module.exports = {
         'light-gray': '#737373',
         'camo': '#96BA7B'
       },
-      fontFamily: {
-        raleway: ['Raleway', 'sans-serif']
-      }
     }
   },
   variants: {
