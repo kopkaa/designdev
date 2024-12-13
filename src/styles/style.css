@@ -29,3 +29,31 @@ html, body {
 .swal-button:hover {
   background-color: theme('colors.green.800')!important;
 }
+
+
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: theme('colors.camo')!important;
+  width: 40px;
+  height: 40px;
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  color: theme('colors.green.800')!important;
+}
+
+.swiper-wrapper {
+  padding-bottom: 1rem!important;
+}
+
+
+.swiper-pagination-bullet-active {
+  background-color: theme('colors.camo')!important;
+  opacity: 1;
+}
+
+.swiper-pagination {
+  bottom: -4px !important;
+}

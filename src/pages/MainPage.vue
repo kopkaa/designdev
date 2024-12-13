@@ -6,7 +6,7 @@
 
   <!-- ------------------------PACKAGES SECTION-----------------------  -->
   <section class="bg-white px-8 py-16 md:px-0 md:py-40">
-    <div class="mx-auto grid grid-cols-1 items-start gap-12 md:grid-cols-2 xl:max-w-screen-lg 2xl:max-w-screen-xl">
+    <div class="mx-auto grid grid-cols-1 items-start gap-12 md:grid-cols-2 md:max-w-screen-lg 2xl:max-w-screen-xl">
       <div>
         <span class="mb-5 block h-1 w-20 bg-red-500"></span>
         <h2 class="mb-8 text-4xl font-bold text-gray-900"> Approadable Packages </h2>
@@ -28,27 +28,40 @@
 
   <!-- ------------------------Team SECTION-----------------------  -->
   <section class="px-8 py-16 md:px-0 md:py-40">
-    <div class="mx-auto xl:max-w-screen-lg 2xl:max-w-screen-xl">
+    <div class="mx-auto md:max-w-screen-lg 2xl:max-w-screen-xl">
       <h6 class="text-sm font-bold text-camo">Team</h6>
       <h3 class="mt-2 text-2xl font-bold text-gray-800 sm:text-3xl"> Get quality education </h3>
       <p class="mt-4 max-w-md text-base text-light-gray xl:max-w-xl">
         Problems trying to resolve the conflict between the two major realms of Classical physics: Newtonian mechanics
       </p>
-      <div class="mx-auto mt-28 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4 xl:max-w-screen-lg">
-        <TeamCardComponent
-          v-for="(person, index) in team"
-          :key="index"
-          :image="person.image"
-          :title="person.title"
-          :description="person.description"
-        />
-      </div>
+
+      <Swiper
+        class="mt-28"
+        :modules="[Navigation, Pagination, Scrollbar]"
+        :slides-per-view="4"
+        :space-between="20"
+        navigation
+        :pagination="{ clickable: true }"
+        :scrollbar="{ draggable: true }"
+        :breakpoints="{
+          340: { slidesPerView: 1, spaceBetween: 10 },
+          768: { slidesPerView: 2, spaceBetween: 15 },
+          1024: { slidesPerView: 4, spaceBetween: 15 },
+          1280: { slidesPerView: 4, spaceBetween: 25 } 
+        }"
+      >
+        <SwiperSlide v-for="(person, index) in team" :key="index" class="swiper-slide">
+          <div class="h-full w-full">
+            <TeamCardComponent :image="person.image" :title="person.title" :description="person.description" />
+          </div>
+        </SwiperSlide>
+      </Swiper>
     </div>
   </section>
 
   <!-- ------------------------CONTACT SECTION-----------------------  -->
   <section class="bg-soft-pink px-8 py-16 md:px-0 md:py-40">
-    <div class="mx-auto xl:max-w-xl 2xl:max-w-screen-2xl">
+    <div class="mx-auto md:max-w-xl 2xl:max-w-screen-md">
       <h6 class="text-center text-sm font-bold text-camo">Newsletter</h6>
       <h3 class="mt-2 text-center text-2xl font-bold text-gray-800 sm:text-3xl"> Watch our Courses </h3>
       <p class="mx-auto mt-4 max-w-xl text-center text-base text-light-gray">
@@ -85,6 +98,8 @@ import ArrowIcon from '@/assets/arrow.svg'
 import { validateEmail } from '@/utils/regex'
 import swal from 'sweetalert'
 import TeamCardComponent from '@/components/TeamCardComponent.vue'
+import { Swiper, SwiperSlide } from 'swiper/vue'
+import { Navigation, Pagination, Scrollbar } from 'swiper/modules'
 
 const email = ref('')
 const emailError = ref('')
@@ -124,6 +139,16 @@ const team = [
   {
     image: '/src/assets/user-cover-4.png',
     title: 'Julian Jameson',
+    description: 'Profession'
+  },
+  {
+    image: '/src/assets/user-cover-1.png',
+    title: 'John Doe',
+    description: 'Profession'
+  },
+  {
+    image: '/src/assets/user-cover-3.png',
+    title: 'Julian Joe',
     description: 'Profession'
   }
 ]

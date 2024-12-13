@@ -1,7 +1,7 @@
 <template>
   <footer class="bg-gray-100">
     <div
-      class="mx-auto grid grid-cols-1 gap-6 py-12 pl-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 xl:max-w-screen-lg 2xl:max-w-screen-xl"
+      class="mx-auto grid grid-cols-1 gap-6 py-12 pl-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 md:max-w-screen-lg 2xl:max-w-screen-xl"
     >
       <FooterList
         title="Company Info"
