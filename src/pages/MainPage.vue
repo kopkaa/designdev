@@ -26,6 +26,26 @@
     </div>
   </section>
 
+  <!-- ------------------------Team SECTION-----------------------  -->
+  <section class="px-8 py-16 md:px-0 md:py-40">
+    <div class="mx-auto xl:max-w-screen-lg 2xl:max-w-screen-xl">
+      <h6 class="text-sm font-bold text-camo">Team</h6>
+      <h3 class="mt-2 text-2xl font-bold text-gray-800 sm:text-3xl"> Get quality education </h3>
+      <p class="mt-4 max-w-md text-base text-light-gray xl:max-w-xl">
+        Problems trying to resolve the conflict between the two major realms of Classical physics: Newtonian mechanics
+      </p>
+      <div class="mx-auto mt-28 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4 xl:max-w-screen-lg">
+        <TeamCardComponent
+          v-for="(person, index) in team"
+          :key="index"
+          :image="person.image"
+          :title="person.title"
+          :description="person.description"
+        />
+      </div>
+    </div>
+  </section>
+
   <!-- ------------------------CONTACT SECTION-----------------------  -->
   <section class="bg-soft-pink px-8 py-16 md:px-0 md:py-40">
     <div class="mx-auto xl:max-w-xl 2xl:max-w-screen-2xl">
@@ -63,8 +83,8 @@ import TelescopeIcon from '@/assets/013-telescope-1.svg'
 import BlackboardIcon from '@/assets/012-blackboards.svg'
 import ArrowIcon from '@/assets/arrow.svg'
 import { validateEmail } from '@/utils/regex'
-import swal from 'sweetalert';
-
+import swal from 'sweetalert'
+import TeamCardComponent from '@/components/TeamCardComponent.vue'
 
 const email = ref('')
 const emailError = ref('')
@@ -77,18 +97,34 @@ const handleSubmit = (event: Event) => {
     emailError.value = 'Please enter a valid email address.'
   } else {
     emailError.value = ''
-    swal("Subscribed!", `Thank you for subscribing to our newsletter ${email.value}. We'll keep you updated with the latest news and updates!`, "success");
+    swal(
+      'Subscribed!',
+      `Thank you for subscribing to our newsletter ${email.value}. We'll keep you updated with the latest news and updates!`,
+      'success'
+    )
   }
 }
-</script>
 
-<style>
-.swal-text {
-  background-color: #FEFAE3;
-  padding: 17px;
-  border: 1px solid #F0E1A1;
-  display: block;
-  text-align: center;
-  color: #61534e;
-}
-</style>
+const team = [
+  {
+    image: '/src/assets/user-cover-1.png',
+    title: 'Julian Jameson',
+    description: 'Profession'
+  },
+  {
+    image: '/src/assets/user-cover-2.png',
+    title: 'Julian Jameson',
+    description: 'Profession'
+  },
+  {
+    image: '/src/assets/user-cover-3.png',
+    title: 'Julian Jameson',
+    description: 'Profession'
+  },
+  {
+    image: '/src/assets/user-cover-4.png',
+    title: 'Julian Jameson',
+    description: 'Profession'
+  }
+]
+</script>

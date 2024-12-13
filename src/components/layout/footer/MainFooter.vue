@@ -77,7 +77,7 @@
       <div
         class="container mx-auto flex flex-col items-center justify-between gap-4 px-4 text-center sm:flex-row xl:max-w-screen-lg 2xl:max-w-screen-xl"
       >
-        <p class="text-sm font-bold text-gray-600"> Made With Love By Figmaland All Rights Reserved </p>
+        <p class="text-sm font-bold text-gray-600"> Made With ❤️ By Figmaland All Rights Reserved </p>
         <ul class="flex gap-4">
           <li>
             <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Visit our Facebook page">
