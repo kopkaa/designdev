@@ -1,7 +1,7 @@
 <template>
   <footer class="bg-gray-100">
     <div
-      class="container mx-auto pl-8 grid grid-cols-1 gap-6 py-12 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 xl:max-w-screen-lg 2xl:max-w-screen-xl"
+      class="mx-auto grid grid-cols-1 gap-6 py-12 pl-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 xl:max-w-screen-lg 2xl:max-w-screen-xl"
     >
       <FooterList
         title="Company Info"
@@ -40,11 +40,10 @@
         ]"
       />
 
-
       <div>
-        <hr class="block xl:hidden">
-        <h3 class="mb-4 text-lg font-semibold text-gray-800 mt-4 md:mt-0">Get In Touch</h3>
-        <ul class="space-y-2 text-light-gray font-bold">
+        <hr class="block xl:hidden" />
+        <h3 class="mb-4 mt-4 text-lg font-semibold text-gray-800 md:mt-0">Get In Touch</h3>
+        <ul class="space-y-2 font-bold text-light-gray">
           <li>
             <a href="tel:4805550103" class="flex items-center hover:text-gray-800" aria-label="Call us at (480) 555-0103">
               <img :src="ContactIcon" alt="Contact icon" class="mr-3 h-5 w-5" loading="lazy" decoding="async" /> (480) 555-0103
@@ -73,7 +72,7 @@
         </ul>
       </div>
     </div>
-    
+
     <div class="bg-gray-200 py-6">
       <div
         class="container mx-auto flex flex-col items-center justify-between gap-4 px-4 text-center sm:flex-row xl:max-w-screen-lg 2xl:max-w-screen-xl"
@@ -81,13 +80,19 @@
         <p class="text-sm font-bold text-gray-600"> Made With Love By Figmaland All Rights Reserved </p>
         <ul class="flex gap-4">
           <li>
-            <img :src="FacebookIcon" alt="Facebook icon" class="h-5 w-5" loading="lazy" decoding="async" />
+            <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Visit our Facebook page">
+              <img :src="FacebookIcon" alt="Facebook icon" class="h-5 w-5 cursor-pointer" loading="lazy" decoding="async" />
+            </a>
           </li>
           <li>
-            <img :src="InstagramIcon" alt="Instagram icon" class="h-5 w-5" loading="lazy" decoding="async" />
+            <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Visit our Instagram page">
+              <img :src="InstagramIcon" alt="Instagram icon" class="h-5 w-5 cursor-pointer" loading="lazy" decoding="async" />
+            </a>
           </li>
           <li>
-            <img :src="TwitterIcon" alt="Twitter icon" class="h-5 w-5" loading="lazy" decoding="async" />
+            <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Visit our Twitter page">
+              <img :src="TwitterIcon" alt="Twitter icon" class="h-5 w-5 cursor-pointer" loading="lazy" decoding="async" />
+            </a>
           </li>
         </ul>
       </div>
