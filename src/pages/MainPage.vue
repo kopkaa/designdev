@@ -13,7 +13,10 @@
         <p class="mb-6 text-sm text-light-gray">
           Problems trying to resolve the conflict between the two major realms of Classical physics: Newtonian mechanics.
         </p>
-        <a href="#" class="font-semibold text-camo hover:underline"> Learn More → </a>
+        <a href="#" class="group inline-flex items-center font-semibold text-camo hover:underline">
+          Learn More
+          <img :src="ArrowIcon" alt="Arrow icon" class="ml-2 h-3 w-3 transition-transform group-hover:translate-x-[5px]" />
+        </a>
       </div>
 
       <div class="grid grid-cols-1 gap-6 sm:grid-cols-2">
@@ -36,12 +39,12 @@
           <input
             v-model="email"
             placeholder="Your Email"
-            class="w-full flex-1 rounded-md xl:rounded-r-none border border-gray-300 px-4 py-3 xl:rounded-r-md"
+            class="w-full flex-1 rounded-md border border-gray-300 px-4 py-3 xl:rounded-r-md xl:rounded-r-none"
             aria-label="Enter your email address"
           />
           <button
             type="submit"
-            class="mt-4 rounded-md xl:rounded-l-none bg-camo px-6 py-3 font-medium text-white transition hover:bg-green-800 xl:mt-0 xl:rounded-r-md"
+            class="mt-4 rounded-md bg-camo px-6 py-3 font-medium text-white transition hover:bg-green-800 xl:mt-0 xl:rounded-l-none xl:rounded-r-md"
           >
             Subscribe
           </button>
@@ -58,7 +61,10 @@ import HeroComponent from '@/components/HeroComponent.vue'
 import PackageCard from '@/components/PackageCard.vue'
 import TelescopeIcon from '@/assets/013-telescope-1.svg'
 import BlackboardIcon from '@/assets/012-blackboards.svg'
+import ArrowIcon from '@/assets/arrow.svg'
 import { validateEmail } from '@/utils/regex'
+import swal from 'sweetalert';
+
 
 const email = ref('')
 const emailError = ref('')
@@ -71,7 +77,18 @@ const handleSubmit = (event: Event) => {
     emailError.value = 'Please enter a valid email address.'
   } else {
     emailError.value = ''
-    alert('Thank you for subscribing!')
+    swal("Subscribed!", `Thank you for subscribing to our newsletter ${email.value}. We'll keep you updated with the latest news and updates!`, "success");
   }
 }
 </script>
+
+<style>
+.swal-text {
+  background-color: #FEFAE3;
+  padding: 17px;
+  border: 1px solid #F0E1A1;
+  display: block;
+  text-align: center;
+  color: #61534e;
+}
+</style>

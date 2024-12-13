@@ -2,9 +2,9 @@
 import { defineProps } from 'vue'
 
 const { icon, title, description } = defineProps<{
-  icon: string
-  title: string
-  description: string
+  readonly icon: string
+  readonly title: string
+  readonly description: string
 }>()
 </script>
 

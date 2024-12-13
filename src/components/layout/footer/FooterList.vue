@@ -17,8 +17,8 @@
   
   <script lang="ts" setup>
 const { links, title } = defineProps<{
-  links: { label: string, href: string}[]
-  title: string
+  readonly links: { label: string, href: string}[]
+  readonly title: string
 }>()
   </script>
   

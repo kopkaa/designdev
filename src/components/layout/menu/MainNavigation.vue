@@ -27,7 +27,6 @@ const menuItems = [
 ];
 
 const { y } = useScroll(window);
-
 const isScrolled = computed(() => y.value > 10);
 </script>
 

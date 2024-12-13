@@ -22,7 +22,7 @@
   </div>
 </template>
 <script lang="ts" setup>
-const { menuItems } = defineProps<{ menuItems: { label: string; link: string }[] }>()
+const { menuItems } = defineProps<{ readonly menuItems: { label: string; link: string }[] }>()
 </script>
 <style scoped>
 @keyframes pulse-size {
