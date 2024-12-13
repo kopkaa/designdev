@@ -1,5 +1,30 @@
 # Vue 3 + TypeScript + Vite
 
-This template should help get you started developing with Vue 3 and TypeScript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
 
-Learn more about the recommended Project Setup and IDE Support in the [Vue Docs TypeScript Guide](https://vuejs.org/guide/typescript/overview.html#project-setup).
+## Requirements
+- **Node.js**: Ensure you have Node.js installed (preferably the latest stable version).
+- **npm**: Comes with Node.js; ensure it's updated.
+
+## How to Run the Project
+1. Clone the repository:
+   ```bash
+   git clone git@github.com:kopkaa/designdev.git
+   ```
+
+2. Navigate to the project directory:
+   ```bash
+   cd designdev
+   ```
+
+3. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+4. Run the development server:
+   ```bash
+   npm run dev
+   ```
+
+
+
