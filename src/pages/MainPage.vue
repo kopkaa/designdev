@@ -6,7 +6,7 @@
 
   <!-- ------------------------PACKAGES SECTION-----------------------  -->
   <section class="bg-white px-8 py-16 md:px-0 md:py-40">
-    <div class="mx-auto grid grid-cols-1 items-start gap-12 md:grid-cols-2 md:max-w-screen-lg 2xl:max-w-screen-xl">
+    <div class="mx-auto grid grid-cols-1 items-start gap-12 md:max-w-screen-lg md:grid-cols-2 2xl:max-w-screen-xl">
       <div>
         <span class="mb-5 block h-1 w-20 bg-red-500"></span>
         <h2 class="mb-8 text-4xl font-bold text-gray-900"> Approadable Packages </h2>
@@ -47,7 +47,7 @@
           340: { slidesPerView: 1, spaceBetween: 10 },
           768: { slidesPerView: 2, spaceBetween: 15 },
           1024: { slidesPerView: 4, spaceBetween: 15 },
-          1280: { slidesPerView: 4, spaceBetween: 25 } 
+          1280: { slidesPerView: 4, spaceBetween: 25 }
         }"
       >
         <SwiperSlide v-for="(person, index) in team" :key="index" class="swiper-slide">
@@ -82,7 +82,12 @@
             Subscribe
           </button>
         </div>
-        <p v-if="emailError" class="mt-2 text-sm text-red-600">{{ emailError }}</p>
+        <p
+          v-show="emailError"
+          class="mt-2 whitespace-nowrap text-sm leading-[1.5] text-red-600"
+        >
+          {{ emailError }}
+        </p>
       </form>
     </div>
   </section>
@@ -122,32 +127,32 @@ const handleSubmit = (event: Event) => {
 
 const team = [
   {
-    image: '/src/assets/user-cover-1.png',
+    image: '/images/user-cover-1.png',
     title: 'Julian Jameson',
     description: 'Profession'
   },
   {
-    image: '/src/assets/user-cover-2.png',
+    image: '/images/user-cover-2.png',
     title: 'Julian Jameson',
     description: 'Profession'
   },
   {
-    image: '/src/assets/user-cover-3.png',
+    image: '/images/user-cover-3.png',
     title: 'Julian Jameson',
     description: 'Profession'
   },
   {
-    image: '/src/assets/user-cover-4.png',
+    image: '/images/user-cover-4.png',
     title: 'Julian Jameson',
     description: 'Profession'
   },
   {
-    image: '/src/assets/user-cover-1.png',
+    image: '/images/user-cover-1.png',
     title: 'John Doe',
     description: 'Profession'
   },
   {
-    image: '/src/assets/user-cover-3.png',
+    image: '/images/user-cover-3.png',
     title: 'Julian Joe',
     description: 'Profession'
   }
