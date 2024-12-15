@@ -24,7 +24,7 @@
     </article>
 
     <div class="relative hidden md:block">
-      <img src="@/assets/hero-cover-1.png" alt="Hero image of student" aria-hidden="true" class="relative z-10 h-auto w-full" />
+      <img src="@/assets/hero-cover-1.png" fetchpriority="high" alt="Hero image of student" aria-hidden="true" class="relative z-10 h-auto w-full" />
     </div>
   </div>
 </template>
